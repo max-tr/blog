@@ -11,23 +11,33 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :title %><br />
+  <div class="controls">
+    <%= f.label "Тема" %><br />
     <%= f.text_field :title %>
   </div>
-  <div class="field">
-    <%= f.label :short_description %><br />
-    <%= f.text_field :short_description %>
+  <div class="controls">
+    <%= f.label "Краткое описание" %><br />
+    <%= f.cktext_area :short_description , rows: 7, cols: 10, class: 'span9',
+                        :ckeditor => {:toolbar => "Mini"} %>
   </div>
-  <div class="field">
-    <%= f.label :content %><br />
-    <%= f.text_field :content %>
+  <div class="controls">
+    <%= f.label "Контент" %><br />
+    <%= f.cktext_area :content , rows: 7, cols: 10, class: 'span9',
+                        :ckeditor => {:toolbar => "Mini"} %>
   </div>
-  <div class="field">
-    <%= f.label :rating %><br />
+  <div class="controls">
+    <%= f.label "Рейтинг" %><br />
     <%= f.number_field :rating %>
   </div>
-  <div class="actions">
-    <%= f.submit %>
+  
+
+  <div class="control-group">
+    <span class="control-label"></span>
+    <div class="controls">
+      <button type="submit" class="btn btn-primary">Отправить</button>
+      <%= link_to 'Отмена', posts_path, class: 'btn btn-primary' %>
+    </div>
   </div>
+
+
 <% end %>

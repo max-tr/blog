@@ -1,25 +1,26 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Title:</b>
+  <b>Тема</b>
   <%= @post.title %>
 </p>
 
 <p>
-  <b>Short description:</b>
-  <%= @post.short_description %>
+  <b>Краткое описание</b>
+  <%= @post.short_description.html_safe %>
 </p>
 
 <p>
-  <b>Content:</b>
-  <%= @post.content %>
+  <b>Контент</b>
+  <%= @post.content.html_safe %>
 </p>
 
 <p>
-  <b>Rating:</b>
+  <b>Рейтинг</b>
   <%= @post.rating %>
 </p>
 
 
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
+<%= link_to 'Редактировать', edit_post_path(@post), class: 'btn' %>
+<%= link_to 'Назад', posts_path, class: 'btn' %>
+

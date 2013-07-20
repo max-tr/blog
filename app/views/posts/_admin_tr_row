@@ -1,0 +1,14 @@
+<tr>
+  <td><%= post[:title] %></td>
+  <td><%= post[:short_description] %></td>
+  <td><%= post[:content] %></td>
+  <td><%= post[:rating] %></td>
+  <td>
+    <div class="btn-group ">
+      <%= link_to raw('<i class="icon-eye-open"></i>'), post, class: 'btn', title: 'Показать' %>
+      <%= link_to raw('<i class="icon-pencil"></i>'), edit_post_path(post) , class: 'btn', title: 'Редактировать' %>
+      <%= link_to raw('<i class="icon-remove-sign"></i>'),post,
+                  method: :delete, class: 'btn', data: { confirm: 'Вы уверены, что хотите удалить запись?' }, title: 'Удалить' %>
+    </div>
+  </td>
+</tr>
