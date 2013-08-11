@@ -12,7 +12,23 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require twitter/bootstrap
-//= require_tree .
-//= require angular
-//= require ckeditor/init
+
+//= require jquery-ui/ui/jquery.ui.core
+//= require jquery-ui/ui/jquery.ui.widget
+//= require jquery-ui/ui/jquery.ui.mouse
+//= require jquery-ui/ui/jquery.ui.position
+//= require jquery-ui/ui/jquery.ui.dialog
+//= require jquery-ui/ui/jquery.ui.tooltip
+//= require jquery-ui/ui/jquery.ui.autocomplete
+//= require jquery-ui/ui/jquery.ui.progressbar
+//= require jquery-ui/ui/jquery.ui.sortable
+
+//= require ckeditor/ckeditor
+
+//= require bootstrap-css/js/bootstrap.js
+//= require underscore/underscore.js
+
+//= require angular/angular
+//= require angular-resource/angular-resource
+
+//= require_tree ./admin

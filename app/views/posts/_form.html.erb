@@ -12,8 +12,24 @@
   <% end %>
 
   <div class="controls">
-    <%= f.label "Тема" %><br />
+    <%= f.label "Заголовок" %><br />
     <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label "URL" %><br />
+    <%= f.text_field :url %>
+  </div>
+  <div ng-app="blog">
+    <div ng-init="categories_names=<%= Category.select('id, title').index_by(&:id).to_json %>; edited_category=<%= @post.category_id.to_json %>">
+      <div ng-controller="blogCtrl" >
+        <select ng-model="category" ng-options="value as value.title for (key , value) in categories_names" name='post[category_id]' >
+        </select>
+      </div>
+    </div>
+  </div>
+  <div class="field">
+    <%= f.label "Активность" %><br />
+    <%= f.check_box :is_active %>
   </div>
   <div class="controls">
     <%= f.label "Краткое описание" %><br />

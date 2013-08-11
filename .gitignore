@@ -13,3 +13,12 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+
+# Ignore IDE config
+/.idea
+
+# Other
+config/database.yml
+/db/schema.rb
+/public/uploads
+/vendor/assets/components
